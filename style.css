@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+* {
+  font-family: "League Spartan", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: url(../images/bg-header-desktop.svg), linear-gradient(to bottom, hsl(180, 29%, 50%) 0 9.8em, hsl(180, 52%, 96%) 9.8em 100%), hsl(180, 52%, 96%);
+  background-repeat: repeat-x;
+  height: 100dvh;
+}
+
+.not__show {
+  opacity: 0;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: hsl(180, 31%, 50%); /* Updated background color */
+    color: white; /* Text color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup h3 {
+    font-size: 1.3rem;
+}
+
+.popup p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.popup button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background-color: white;
+    color: hsl(180, 29%, 50%);
+}
+.hidden {
+  display: none !important;
+}
+
+.filter__div {
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 10px rgba(42, 87, 66, 0.301);
+  border-radius: 0.3rem;
+  background-color: white;
+  display: flex;
+}
+.filter__div .filter {
+  font-weight: 700;
+  background-color: hsl(180, 52%, 96%);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+}
+.filter__div .filter::after {
+  transition: 0.2s ease;
+  content: "X";
+  margin-left: 0.5rem;
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+.filter__div .filter:hover::after {
+  background-color: hsl(180, 14%, 20%);
+}
+.filter__div .clear {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
+main {
+  padding: 8rem 1.5rem 1.5rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 65px 1fr 2fr;
+  gap: 2rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 10px rgba(42, 87, 66, 0.301);
+}
+
+.card:nth-child(2),
+.card:nth-child(3) {
+  border-left: 4px solid hsl(180, 29%, 50%);
+}
+
+.logo {
+  width: 70px;
+}
+
+.card__info {
+  align-self: center;
+}
+.card__info .card__title {
+  font-size: 1rem;
+  color: hsl(180, 29%, 50%);
+}
+.card__info .card__title .new {
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.card__info .card__title .featured {
+  color: white;
+  background-color: hsl(180, 14%, 20%);
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.card__info .occupation {
+  font-size: 1.2rem;
+  color: hsl(180, 14%, 20%);
+  margin: 0.8rem 0;
+}
+.card__info .occupation:hover {
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+.card__info .info {
+  display: flex;
+  gap: 1.5rem;
+  color: hsl(180, 8%, 52%);
+}
+.card__info .info li:nth-child(1) {
+  list-style: none;
+}
+
+.card__tech {
+  align-self: center;
+  justify-self: flex-end;
+  gap: 0.5rem;
+}
+.card__tech .tech {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+  transition: 0.2s ease;
+}
+.card__tech .tech:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+
+/* Style for the Add (+) button */
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+/* Style for the popup form */
+#addJobPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#addJobPopup h3 {
+    font-size: 1.3rem;
+}
+
+#addJobPopup form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#addJobPopup form button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#addJobPopup form button:hover {
+    background-color: white;
+    color: hsl(180, 29%, 50%);
+}
+
+#closeAddJobPopup {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+/* Add this CSS to style the delete button */
+.delete-button {
+    background-color: hsl(0, 70%, 50%); /* Red background color */
+    color: white; /* White text color */
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s ease;
+    margin-left: 0.5rem;
+}
+
+.delete-button:hover {
+    background-color: hsl(0, 70%, 40%); /* Darker red on hover */
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    gap: 3rem;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1px auto;
+    gap: 1rem;
+  }
+  .logo {
+    width: 55px;
+    transform: translateY(-95%);
+  }
+  .card__tech {
+    border-top: 1px solid hsl(180, 8%, 52%);
+    width: 100%;
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .card__tech .tech {
+    margin-top: 1rem;
+  }
+}

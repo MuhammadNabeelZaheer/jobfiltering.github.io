@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Frontend Mentor | Job Listings</title>
+  </head>
+  <body>
+    <main>
+      <div class="filter__div not__show">
+        <div class="filters"></div>
+        <button class="clear">Clear</button>
+      </div>
+      <div class="popup" id="jobDetailsPopup">
+        <h3>Job Details</h3>
+        <p><strong>Job title:</strong> <span id="jobTitle"></span></p>
+        <p><strong>Job type:</strong> <span id="jobType"></span></p>
+        <p><strong>Location:</strong> <span id="jobLocation"></span></p>
+        <button id="closePopup">Close</button>
+    </div>
+      <div class="card" id="1">
+        <img class="logo" src="./images/photosnap.svg" alt="Photosnap company logo"/>
+        <div class="card__info">
+          <h1 class="card__title">
+            Photosnap
+            <span class="new">New!</span>
+            <span class="featured">Featured</span>
+          </h1>
+          <h2 class="occupation">Senior Frontend Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>1d ago</li>
+              <li>Full Time</li>
+              <li>USA only</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Senior</button>
+          <button class="tech languages">HTML</button>
+          <button class="tech languages">CSS</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="2">
+        <img class="logo" src="./images/manage.svg" alt="Manage company logo" />
+        <div class="card__info">
+          <h1 class="card__title">
+            Manage
+            <span class="new">New!</span>
+            <span class="featured">Featured</span>
+          </h1>
+          <h2 class="occupation">Fullstack Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>1d ago</li>
+              <li>Part Time</li>
+              <li>Remote</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Fullstack</button>
+          <button class="tech level">Midweight</button>
+          <button class="tech languages">Python</button>
+          <button class="tech tools">React</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="3">
+        <img class="logo" src="./images/account.svg" alt="account company logo"/>
+        <div class="card__info">
+          <h1 class="card__title">
+            Account
+            <span class="new">New!</span>
+          </h1>
+          <h2 class="occupation">Junior Frontend Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>2d ago</li>
+              <li>Part Time</li>
+              <li>USA only</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech tools">React</button>
+          <button class="tech tools">Sass</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="4">
+        <img class="logo" src="./images/myhome.svg" alt="Myhome company logo" />
+        <div class="card__info">
+          <h1 class="card__title">MyHome</h1>
+          <h2 class="occupation">Junior Frontend Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>5d ago</li>
+              <li>Contract</li>
+              <li>USA only</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech languages">CSS</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="5">
+        <img class="logo" src="./images/loop-studios.svg" alt="Loop studios logo"/>
+        <div class="card__info">
+          <h1 class="card__title">Loop Studios</h1>
+          <h2 class="occupation">Software Engineer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>1w ago</li>
+              <li>Full Time</li>
+              <li>Worldwide</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Fullstack</button>
+          <button class="tech level">Midweight</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech tools">Ruby</button>
+          <button class="tech tools">Sass</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="6">
+        <img class="logo" src="./images/faceit.svg" alt="FaceIt company logo" />
+        <div class="card__info">
+          <h1 class="card__title">FaceIt</h1>
+          <h2 class="occupation">Junior Backend Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>2w ago</li>
+              <li>Full Time</li>
+              <li>UK only</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Backend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech tools">Ruby</button>
+          <button class="tech tools">RoR</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="7">
+        <img class="logo" src="./images/shortly.svg" alt="Shortly company logo"/>
+        <div class="card__info">
+          <h1 class="card__title">Shortly</h1>
+          <h2 class="occupation">Junior Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>2w ago</li>
+              <li>Full Time</li>
+              <li>Worldwide</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech languages">HTML</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech tools">Sass</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="8">
+        <img class="logo" src="./images/insure.svg" alt="Insure company logo" />
+        <div class="card__info">
+          <h1 class="card__title">Insure</h1>
+          <h2 class="occupation">Junior Frontend Developer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>2w ago</li>
+              <li>Full Time</li>
+              <li>USA only</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech tools">Vue</button>
+          <button class="tech tools">Sass</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="9">
+        <img class="logo" src="./images/eyecam-co.svg" alt="Eyecam Co. logo" />
+        <div class="card__info">
+          <h1 class="card__title">Eyecam Co.</h1>
+          <h2 class="occupation">Full Stack Engineer</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>3w ago</li>
+              <li>Full Time</li>
+              <li>Worldwide</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Fullstack</button>
+          <button class="tech level">Midweight</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech languages">Python</button>
+          <button class="tech tools">Django</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+      <div class="card" id="10">
+        <img
+          class="logo" src="./images/the-air-filter-company.svg"alt="The Air Filter Company logo"/>
+        <div class="card__info">
+          <h1 class="card__title">The Air Filter Company</h1>
+          <h2 class="occupation">Front-end Dev</h2>
+          <div class="job__info">
+            <ul class="info">
+              <li>1mo ago</li>
+              <li>Part Time</li>
+              <li>Worldwide</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__tech">
+          <button class="tech role">Frontend</button>
+          <button class="tech level">Junior</button>
+          <button class="tech languages">JavaScript</button>
+          <button class="tech tools">React</button>
+          <button class="tech tools">Sass</button>
+          <button class="delete-button">Delete</button>
+        </div>
+      </div>
+
+      <!-- Add (+) button -->
+<button id="addJobButton" class="add-button">+</button>
+
+<!-- Updated HTML for the popup form with Job Type and Location input fields -->
+<div class="popup" id="addJobPopup">
+  <h3>Add a New Job</h3>
+  <form id="jobForm">
+      <input type="text" id="companyName" placeholder="Company Name" required>
+      <input type="text" id="Titlejob" placeholder="Job Title" required>
+      <input type="text" id="experienceLevel" placeholder="Experience Level" required>
+      <input type="text" id="programmingLanguages" placeholder="Programming Languages" required>
+      <input type="text" id="tools" placeholder="Tools" required>
+      <input type="text" id="Typejob" placeholder="Job Type" required> <!-- New input field -->
+      <input type="text" id="location" placeholder="Location" required> <!-- New input field -->
+      <button type="submit">Add Job</button>
+  </form>
+  <button id="closeAddJobPopup">Close</button>
+</div>
+
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
